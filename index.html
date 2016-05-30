@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>北京治安地图</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no"><!-- 取消格式监察 -->
+	<meta name="format-detection" content="email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"><!-- 删除默认的苹果工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-atatus-bar-style" content="black"><!-- 控制状态栏显示样式 -->
+	<meta name="author" content="镝次元实验室（前端by黎晓媚、朱赋蕊、屠正洋）">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css" />
+    <!-- 自定义 -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+	<!-- 自定义 -->
+	<script type="text/javascript" src="js/xiaomei.js"></script>
+	
+</head>
+<body scroll="no">
+<div class="swiper-container">
+	<div id="wrapper" class="swiper-wrapper">
+		<div class="swiper-slide chap1_1">
+			<div class="container">
+			第一章1
+			</div>
+		</div>
+		<div class="swiper-slide chap1_2">
+			<div class="container">
+			第一章2
+			</div>
+		</div>
+		<div class="swiper-slide chap2_1">
+			<div class="container">
+			第二章1
+			</div>
+		</div>
+		<div class="swiper-slide chap2_2">
+			<div class="container">
+			第二章2
+			</div>
+		</div>
+		<div class="swiper-slide chap3_1">
+			<div class="container">
+			第三章1
+			</div>
+		</div>
+		<div class="swiper-slide chap3_2">
+			<div class="container">
+			第三章2
+			</div>
+		</div>
+		<div class="swiper-slide chap4_1">
+			<div class="container">
+			第四章1
+			</div>
+		</div>
+		<div class="swiper-slide chap4_2">
+			<div class="container">
+			第四章2
+			</div>
+		</div>
+	</div>
+
+</div>
+	
+<script type="text/javascript">
+
+	//swiper.js
+	var mySwiper = new Swiper ('.swiper-container', {
+	    loop: false,
+	    
+	    // 如果需要前进后退按钮
+	    nextButton: '.swiper-button-next',
+	    onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+	        swiperAnimateCache(swiper); //隐藏动画元素
+	        swiperAnimate(swiper); //初始化完成开始动画
+	    },
+	    onSlideChangeStart: function(swiper){
+	    	if (mySwiper.progress == 0.5) {
+	    		if(!geoqStarted){
+	    			map.window.geoq.start();
+	    			geoqStarted = true;
+	    		}
+	    		
+	    	}
+	    },
+	    onSlideChangeEnd: function(swiper){
+	        swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+	    }
+	})
+
+// 样式调整
+	
+</script>
+</body>
+</html>

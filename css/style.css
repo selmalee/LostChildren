@@ -1,0 +1,55 @@
+/* xiaomei li start
+   ---------------------------------------------------------------*/
+* {
+	margin: 0; padding: 0;
+}
+html {
+	font-size: 16px;
+	font-family: "Microsoft YaHei UI", sans-serif;
+	/*PC端*/
+	width: 360px; height: 100%;
+}
+body, .swiper-container, .swiper-wrapper, .swiper-slide {
+	width: 100%; height: 100%;
+	position: relative;
+}
+.swiper-container {
+	overflow: hidden;
+}
+.swiper-slide {
+	color: #fff;
+	font-size: 4rem;
+	text-align: center;
+}
+.chap1_1, .chap1_2, .chap3_1, .chap3_2 {
+	background-color: #203451;
+	/*background-image: url("http://dyclub-static.oss-cn-qingdao.aliyuncs.com/img/2016/05/pekingSecurity/bg.png");*/
+}
+.chap2_1, .chap2_2, .chap4_1, .chap4_2 {
+	background-color: #ccc;
+}
+.img {
+	background-size: 100% 100%;
+	position: absolute;
+}
+/*--------------------chapter1_1-------------------------*/
+
+/*--------------------chapter1_1-------------------------*/
+
+/*--------------------chapter1_1-------------------------*/
+
+/*--------------------chapter1_1-------------------------*/
+
+/*--------------------chapter1_1-------------------------*/
+
+/*--------------------chapter1_1-------------------------*/
+
+/*--------------------chapter1_1-------------------------*/
+
+/* 手机自适应 */
+@media screen and (max-width: 640px) {
+	html {
+		font-size: 3.8vw;/* 16/414=3.8，实现字体大小自适应*/
+		width: 100%;
+	}
+}
